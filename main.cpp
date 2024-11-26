@@ -4,23 +4,23 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[NELEMENTS]; // rosszul van megadva a változó
-    std::cout << '1-100 ertekek duplazasa' // '' helyett ""
-    for (int i = 0;) // rosszul van megadva a for ciklus
+    int *b = new int[N_ELEMENTS];
+    std::cout << "1-100 ertekek duplazasa";
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
         b[i] = i * 2;
-    } // hiányzó ;
-    for (int i = 0; i; i++) // rosszul van megadva a for ciklus
+    };
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        std::cout << "Ertek:" // hiányzó ;
+        std::cout << "Ertek:";
     }    
     std::cout << "Atlag szamitasa: " << std::endl;
-    int atlag; // rosszul van definialva
-    for (int i = 0; i < N_ELEMENTS, i++)
+    int atlag = 0;
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        atlag += b[i] // hiányzó ;
-    } // hiányzó ;
-    atlag /= N_ELEMENTS; // rosszul van megadva az osztás
+        atlag += b[i];
+    };
+    atlag = atlag / N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
     return 0;
 
